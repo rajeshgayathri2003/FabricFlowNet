@@ -71,6 +71,7 @@ if __name__ == '__main__':
     parser.add_argument('--cloth_type', help='cloth type to load', default='square_towel', choices=['square_towel', 'rect_towel', 'tshirt'])
     parser.add_argument("--cached", type=str, help="Cached filename")
     parser.add_argument("--task", type=str, default="DoubleTriangle", help="Task name")
+    parser.add_argument('--headless', help='Run headless evaluation', action='store_true')
     '''
     parser.add_argument('--single_pick_thresh', help='min px distance to switch dual pick to single pick', default=30)
     parser.add_argument('--action_len_thresh', help='min px distance for an action', default=10)
