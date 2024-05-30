@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-from omegaconf import OmegaConf
+#from omegaconf import OmegaConf
 import imageio
 from softgym.utils.slurm_utils import find_corners, find_pixel_center_of_cloth, get_mean_particle_distance_error
 from datetime import date, timedelta
@@ -81,3 +81,6 @@ if __name__ == '__main__':
     parser.add_argument('--crumple_idx', help='index for crumpled initial configuration, set to -1 for no crumpling', type=int, default=-1)
     '''
     args = parser.parse_args()
+
+    env = EnvRollout(args)
+    env.load_image(args)
